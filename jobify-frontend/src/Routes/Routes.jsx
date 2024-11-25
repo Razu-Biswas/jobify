@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../Pages/Main/Home";
 import ErrorPage from "./../Pages/ErrorPage/ErrorPage";
 import MainLayout from "./../Layout/MainLayout/MainLayout";
+import Register from "../Pages/Register/Register";
+import Login from "../Pages/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -13,48 +15,48 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      //   {
-      //     path: "donationRequests",
-      //     element: <DonationRequest />,
-      //   },
-      //   {
-      //     path: "donationDetails/:id",
-      //     element: (
-      //       <PrivateRoute>
-      //         <DonationsDetails />
-      //       </PrivateRoute>
-      //     ),
-      //   },
-      //   {
-      //     path: "funding",
-      //     element: (
-      //       <PrivateRoute>
-      //         <Funding />
-      //       </PrivateRoute>
-      //     ),
-      //   },
-      //   {
-      //     path: "searchPage",
-      //     element: <SearchPage />,
-      //   },
-      //   {
-      //     path: "allBlogs",
-      //     element: <AllBlogs />,
-      //   },
-      //   {
-      //     path: "blogDetails/:id",
-      //     element: <BlogDetails />,
-      //   },
-      //   {
-      //     path: "/registration",
-      //     errorElement: <ErrorPage />,
-      //     element: <Registration />,
-      //   },
-      //   {
-      //     path: "/login",
-      //     errorElement: <ErrorPage />,
-      //     element: <Login />,
-      //   },
+      // {
+      //   path: "donationRequests",
+      //   element: <DonationRequest />,
+      // },
+      // {
+      //   path: "donationDetails/:id",
+      //   element: (
+      //     <PrivateRoute>
+      //       <DonationsDetails />
+      //     </PrivateRoute>
+      //   ),
+      // },
+      // {
+      //   path: "funding",
+      //   element: (
+      //     <PrivateRoute>
+      //       <Funding />
+      //     </PrivateRoute>
+      //   ),
+      // },
+      // {
+      //   path: "searchPage",
+      //   element: <SearchPage />,
+      // },
+      // {
+      //   path: "allBlogs",
+      //   element: <AllBlogs />,
+      // },
+      // {
+      //   path: "blogDetails/:id",
+      //   element: <BlogDetails />,
+      // },
+      {
+        path: "/registration",
+        errorElement: <ErrorPage />,
+        element: <Register />,
+      },
+      {
+        path: "/login",
+        errorElement: <ErrorPage />,
+        element: <Login />,
+      },
     ],
   },
   // {

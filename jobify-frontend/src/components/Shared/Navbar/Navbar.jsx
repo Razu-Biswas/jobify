@@ -31,6 +31,7 @@ function Navbar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   // const { user, logout, isLoading } = React.useContext(AuthContext);
   // const [userInfo, userLoading] = userUserProfile();
+  const [user, setUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -212,7 +213,7 @@ function Navbar() {
           >
             Jobi
             <Typography variant="h6" noWrap sx={{ color: "primary.main" }}>
-              Fy
+              fy
             </Typography>
           </Typography>
 
@@ -232,8 +233,8 @@ function Navbar() {
             <NavLink className="menu" to={"/"}>
               Home
             </NavLink>
-            <NavLink className="menu" to={"/donationRequests"}>
-              Donation Requests
+            <NavLink className="menu" to={"/jobs"}>
+              Jobs
             </NavLink>
             <NavLink className="menu" to={"/allBlogs"}>
               Blog
@@ -266,7 +267,7 @@ function Navbar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            {/* {!user && (
+            {!user && (
               <Grid
                 sx={{
                   display: { xs: "flex", md: "none" },
@@ -311,7 +312,7 @@ function Navbar() {
                   </Button>
                 </Link>
               </>
-            )} */}
+            )}
 
             {/* {user && (
               <Tooltip title="Options">
